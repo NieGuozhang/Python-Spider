@@ -1,0 +1,1 @@
+# request模块    - urllib模块 老版本    - request模块（重点）    ## requests模块- Python中原生的一款基于网络请求的模块，功能非常强大，简单便捷，效率极高- 作用：模拟浏览器发请求。## 如何使用requests（requests模块的编码流程）- 指定url- 发起请求- 获取响应数据- 持久化存储，存入数据库## 环境安装`pip install requests`## 实战编码- 需求：爬取搜狗首页的页面数据
