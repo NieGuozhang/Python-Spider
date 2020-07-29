@@ -21,5 +21,5 @@
     - 执行工程
         - `scrapy crawl spiderName`
 ## scrapy数据解析
-
+- 可以直接由response采用xpath进行解析
     
