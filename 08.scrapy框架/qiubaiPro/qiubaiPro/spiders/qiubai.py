@@ -9,6 +9,7 @@ class QiubaiSpider(scrapy.Spider):
     def parse(self, response):
         # 解析作者的名称+段子内容
         div_list = response.xpath('//*[@id="content"]/div/div[2]/div')
+        all_data = []  # 存储所有解析到的数据
         for div in div_list:
             # xpath返回的是列表，列表元素是selector类型的对象
             # extract()可以将selector对象中对应的字符串提取出来
@@ -16,5 +17,10 @@ class QiubaiSpider(scrapy.Spider):
             # 列表调用extract()方法则表示将列表中每一个selector对象中的字符串提取出来
             content = div.xpath('./a[1]/div/span//text()').extract()
             content = ''.join(content)  # 转化为字符串
-            print(author, content)
-            break
+
+            dict = {
+                'author': author,
+                'content': content,
+            }
+            all_data.append(dict)
+        return all_data

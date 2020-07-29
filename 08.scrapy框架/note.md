@@ -22,4 +22,15 @@
         - `scrapy crawl spiderName`
 ## scrapy数据解析
 - 可以直接由response采用xpath进行解析
+
+## scrapy数据持久化存储
+- 基于终端指令
+    - 要求：只可以将parse方法的返回值存储到本地的文本文件中，所以需要parse方法有返回值
+    - 注意：持久化存储文件对应的格式只能是：('json', 'jsonlines', 'jl', 'csv', 'xml', 'marshal', 'pickle')
+    - 指令：` scrapy crawl XXX -o filePath`
+    - 好处：简介高效便捷
+    - 缺点：局限性比较强（数据只可以存储到指定后缀的文本文件中，不能存到数据库）
+- **基于管道**（重点）
+    - 编码流程
+        - 
     
