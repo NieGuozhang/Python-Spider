@@ -8,7 +8,7 @@ import chaojiying
 def main():
     browser = webdriver.Chrome('./chromedriver')
 
-    # 打开登录页面
+    # 打开登录页面 （可以根据自己需要选择相应的网站进行自动登录）
     browser.get('http://218.197.101.24')
     time.sleep(1)
 
